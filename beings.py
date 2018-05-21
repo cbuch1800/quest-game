@@ -12,6 +12,7 @@ class Being():
     def __init__(self, name, home):
         self.name = name
         self.home = home
+        self.experience = 1
     
     def get_full_name(self):
         return self.name + " of " + self.home

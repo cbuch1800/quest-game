@@ -17,6 +17,16 @@ class Weapon():
     def change_damage(self, change):
         self.damage += change
 
+    def get_durability(self):
+        return self.durability
+
+    def set_durability(self, durability):
+        self.durability = durability
+
+    def change_durability(self, change):
+        self.durability += change
+
+
 
 class NaturalWeapon(Weapon):
 
@@ -26,6 +36,15 @@ class NaturalWeapon(Weapon):
         super().__init__(self)
         self.durability = math.inf
         self.quantity = quantity
+
+    def get_durability(self):
+        pass
+
+    def set_durability(self):
+        pass
+
+    def change_durability(self):
+        pass
         
 
 class PhysicalWeapon(Weapon):
@@ -40,14 +59,6 @@ class PhysicalWeapon(Weapon):
         else:
             self.name = name
 
-    def get_durability(self):
-        return self.durability
-
-    def set_durability(self, durability):
-        self.durability = durability
-
-    def change_durability(self, change):
-        self.durability += change
 
 
 class Fist(NaturalWeapon):
