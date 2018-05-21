@@ -1,10 +1,13 @@
 class Being():
+    'Base class for all living characters in the game'
 
     name = ""
     home = ""
     vitality = 0
     dexterity = 0
     agility = 0
+    experience = 0
+    # INIT AND GET/SET/CHANGE FOR EXPERIENCE
 
     def __init__(self, name, home):
         self.name = name
