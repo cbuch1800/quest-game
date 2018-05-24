@@ -51,52 +51,57 @@ class Being():
 
 
 class Human(Being):
+    'Being subclass for creating player characters. Has a balanced skillset.'
 
     _human_count = 0
+    _vitality = 5
+    _dexterity = 5
+    _agility = 5
 
     def __init__(self, name, home):
         super().__init__(name, home)
         Human._human_count += 1
-        self._vitality = 5
-        self._dexterity = 5
-        self._agility = 5
 
 
 class Gnome(Being):
+    'Being subclass for creating player characters. Is very quick.'
 
     _gnome_count = 0
+    _vitality = 4
+    _dexterity = 5
+    _agility = 6
 
     def __init__(self, name, home):
         super().__init__(name, home)
         Gnome._gnome_count += 1
-        self._vitality = 4
-        self._dexterity = 5
-        self._agility = 6
 
 
 class Cyclops(Being):
+    'Being subclass for creating player characters. Is very strong.'
 
     _cyclops_count = 0
+    _vitality = 6
+    _dexterity = 4
+    _agility = 5
 
     def __init__(self, name, home):
         super().__init__(name, home)
-        Cyclops._cyclops_count += 1   
-        self._vitality = 6
-        self._dexterity = 4
-        self._agility = 5
+        Cyclops._cyclops_count += 1
 
 
 class Elf(Being):
+    'Being subclass for creating player characters. Is highly skilled.'
 
     _elf_count = 0
+    _vitality = 5
+    _dexterity = 6
+    _agility = 4
 
     def __init__(self, name, home):
         super().__init__(name, home)
         Elf._elf_count += 1   
-        self._vitality = 5
-        self._dexterity = 6
-        self._agility = 4
 
 
-myBeing = Human("crAig", "Aberdeen")
+
+myBeing = Cyclops("crAig", "Aberdeen")
 print(myBeing.get_full_name())
