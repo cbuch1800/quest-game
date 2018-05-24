@@ -15,14 +15,14 @@ def human_print(string):
             print(i, end="")
             sys.stdout.flush()
             time.sleep(.3)
-    print("\n")
+    print()
 
 def type_print(string):
     for i in string:
         print(i, end="")
         sys.stdout.flush()
         time.sleep(.1)
-    print("\n")
+    print()
 
 def reverse_print(string):
     for i in range(len(string)-1,-1,-1):
@@ -30,14 +30,14 @@ def reverse_print(string):
         sys.stdout.flush()
         time.sleep(.2)
         print("\r", end="")
-    print("\n")
+    print()
 
 def scroll_print(string):
     for i in range(len(string)-1,-1,-1):
         print(string[i:] + "\r", end="")
         sys.stdout.flush()
         time.sleep(.2)
-    print("\n")
+    print()
 
 def overwrite_print(string):
     for i in range(len(string)):
@@ -48,7 +48,7 @@ def overwrite_print(string):
         time.sleep(.2)
         print(i, end="")
         sys.stdout.flush()
-    print("\n")
+    print()
 
 
 # string = input("Enter your string: ")
